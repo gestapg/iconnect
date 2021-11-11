@@ -1,4 +1,6 @@
 {
   "mongoURI": "mongodb+srv://gestapg:RhmtT4rOk2z1WOz3@iconnect.zwmcm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-  "jwtSecret": "my-very-secret-token"
+  "jwtSecret": "my-very-secret-token",
+  "githubClientId": "ae6128fddcb7520e5e1d",
+  "githubSecret": "8a42e40841409f8a6112e58c2ad2a2bdcbcb85db"
 }
