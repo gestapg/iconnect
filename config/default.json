@@ -1,3 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://gestapg:RhmtT4rOk2z1WOz3@iconnect.zwmcm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://gestapg:RhmtT4rOk2z1WOz3@iconnect.zwmcm.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "my-very-secret-token"
 }
