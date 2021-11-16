@@ -28,7 +28,7 @@ router.get('/', profileController.getAllProfiles);
 // @route GET api/profile/user/:user_id || @desc Get profile by user id || @access Public
 router.get('/user/:user_id', profileController.getProfileById);
 
-// @route DELETE api/profile || @desc Get profile, user & posts || @access Private
+// @route DELETE api/profile || @desc delete profile, user & posts || @access Private
 router.delete('/', auth, profileController.deleteAccount);
 
 // @route PUT api/profile/experience || @desc Add profile experience || @access Private

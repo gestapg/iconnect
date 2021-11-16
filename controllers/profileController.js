@@ -4,6 +4,7 @@ const { validationResult } = require('express-validator');
 
 const Profile = require('../models/Profile');
 const User = require('../models/User');
+const Post = require('../models/Post');
 
 exports.getCurrentUser = async (req, res) => {
   try {
@@ -28,6 +29,7 @@ exports.createOrUpdateUser = async (req, res) => {
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });
   }
+  console.log(req.body);
 
   const {
     company,
@@ -117,7 +119,8 @@ exports.getProfileById = async (req, res) => {
 
 exports.deleteAccount = async (req, res) => {
   try {
-    // @todo - remove users posts
+    // Remove users posts
+    await Post.deleteMany({ user: req.user.id });
     // Remove profile
     await Profile.findOneAndRemove({ user: req.user.id });
     // Remove user
