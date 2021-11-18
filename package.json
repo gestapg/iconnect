@@ -6,9 +6,9 @@
   "scripts": {
     "start": "node server",
     "server": "nodemon server",
-    "client": "npm start --prefix client",
+    "client": "yarn start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn install --prefix client && yarn run build --prefix client"
+    "heroku-postbuild": "yarn install --prefix client && yarn run build --prefix client"
   },
   "author": "Gesta Putra Gemilang",
   "license": "MIT",
