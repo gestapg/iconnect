@@ -241,11 +241,7 @@ exports.deleteProfileEducation = async (req, res) => {
 exports.getUserGithub = async (req, res) => {
   try {
     const options = {
-      uri: `https://api.github.com/users/${
-        req.params.username
-      }/repos?per_page=5&sort=created:asc&client_id=${config.get(
-        'githubClientId'
-      )}$client_secret=${config.get('githubSecret')}`,
+      uri: `https://api.github.com/users/${req.params.username}/repos?per_page=5&sort=created:asc&client_id=${process.env.GITHUBID}$client_secret=${process.env.GITHUBSECRET}`,
       method: 'GET',
       headers: {
         'user-agent': 'node.js',
