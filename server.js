@@ -2,7 +2,6 @@ const express = require('express');
 const connectDB = require('./config/db');
 const dotenv = require('dotenv');
 const path = require('path');
-const morgan = require('morgan');
 
 dotenv.config();
 const app = express();
@@ -13,7 +12,6 @@ connectDB();
 
 // Init Middleware
 app.use(express.json({ extended: false }));
-app.use(morgan('dev'));
 
 // Define Routes
 app.use('/api/users', require('./routes/api/users'));
