@@ -15,7 +15,7 @@ const initialStat = {
   error: {},
 };
 
-export default function (state = initialStat, action) {
+export default function profileReducer(state = initialStat, action) {
   const { type, payload } = action;
 
   switch (type) {
